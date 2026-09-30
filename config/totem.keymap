@@ -23,19 +23,6 @@
 #define TVP1 4
 #define TVP2 5
 
-/ {
-    chosen {
-        zmk,physical-layout = &totem_layout;
-    };
-
-    totem_layout: totem_layout {
-        compatible = "zmk,physical-layout";
-        display-name = "Default";
-        transform = <&default_transform>;
-        kscan = <&kscan0>;
-    };
-};
-
 &mt {
     quick-tap-ms = <100>;
     global-quick-tap;
@@ -297,14 +284,13 @@
         };
 
         Navigation {
+            display-name = "NAV";
             bindings = <
        &kp TAB       &trans        &trans     &trans          &kp C_BRIGHTNESS_INC    &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP   &kp END     &kp C_STOP_EJECT
        &sk LEFT_GUI  &sk LEFT_ALT  &sk RCTRL  &sk LEFT_SHIFT  &kp C_SLEEP             &kp LEFT        &kp DOWN       &kp UP_ARROW  &kp RIGHT   &kp ENTER
 &to 0  &tog 4        &sl 3         &trans     &trans          &kp C_BRIGHTNESS_DEC    &kp C_PREVIOUS  &kp C_VOL_DN   &kp C_VOL_UP  &kp C_NEXT  &kp C_PLAY_PAUSE  &kp C_MUTE
                                    &trans     &trans          &trans                  &trans          &trans         &trans
             >;
-
-            display-name = "NAV";
         };
 
         Number {
@@ -318,36 +304,33 @@
         };
 
         Function {
+            display-name = "FUNC";
             bindings = <
        &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4     &bt BT_CLR_ALL  &kp F7  &kp F8  &kp F9  &kp F10
        &sk LEFT_GUI   &sk LEFT_ALT   &sk LCTRL      &sk LEFT_SHIFT  &bt BT_CLR       &out OUT_BLE    &kp F4  &kp F5  &kp F6  &kp F11
 &to 0  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3   &bt BT_DISC 4    &out OUT_USB    &kp F1  &kp F2  &kp F3  &kp F12  &kp PRINTSCREEN
                                      &trans         &trans          &trans           &trans          &trans  &trans
             >;
-
-            display-name = "FUNC";
         };
 
         Game {
+            display-name = "GAME";
             bindings = <
             &kp LCTRL       &kp Q  &kp X  &kp E    &kp R        &trans  &trans  &trans  &trans  &trans
             &kp LEFT_SHIFT  &kp A  &kp W  &kp D    &kp F        &trans  &trans  &trans  &trans  &trans
 &kp ESCAPE  &kp LEFT_ALT    &kp Z  &kp S  &kp C    &kp V        &trans  &trans  &trans  &trans  &trans  &trans
                                    &mo 5  &kp TAB  &kp SPACE    &trans  &trans  &trans
             >;
-
-            display-name = "GAME";
         };
 
         GamePlus {
+            display-name = "GAME+";
             bindings = <
        &kp NUMBER_1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans
        &kp I         &kp Y   &kp T   &kp H   &kp G     &trans  &trans  &trans  &trans  &trans
 &to 0  &trans        &kp L   &kp B   &kp N   &kp M     &trans  &trans  &trans  &trans  &trans  &trans
                              &trans  &trans  &trans    &trans  &trans  &trans
             >;
-
-            display-name = "GAME+";
         };
     };
 };
