@@ -134,7 +134,7 @@
         };
 
         R_shift {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp RIGHT_SHIFT>;
             key-positions = <19 18>;
             timeout-ms = <50>;
             layers = <0>;
@@ -157,86 +157,97 @@
         B1 {
             bindings = <&bt BT_SEL 0>;
             key-positions = <31 0>;
+            layers = <0>;
         };
 
         B2 {
             bindings = <&bt BT_SEL 1>;
             key-positions = <31 1>;
+            layers = <0>;
         };
 
         B3 {
             bindings = <&bt BT_SEL 2>;
             key-positions = <31 2>;
+            layers = <0>;
         };
 
         B4 {
             bindings = <&bt BT_SEL 3>;
             key-positions = <31 3>;
+            layers = <0>;
         };
 
         B5 {
             bindings = <&bt BT_SEL 4>;
             key-positions = <31 4>;
+            layers = <0>;
         };
 
         B1D {
             bindings = <&bt BT_DISC 0>;
             key-positions = <31 10>;
+            layers = <0>;
         };
 
         B2D {
             bindings = <&bt BT_DISC 1>;
             key-positions = <31 11>;
+            layers = <0>;
         };
 
         B3D {
             bindings = <&bt BT_DISC 2>;
             key-positions = <31 12>;
+            layers = <0>;
         };
 
         B4D {
             bindings = <&bt BT_DISC 3>;
             key-positions = <31 13>;
+            layers = <0>;
         };
 
         B5D {
             bindings = <&bt BT_DISC 4>;
             key-positions = <31 14>;
+            layers = <0>;
         };
 
         BCA {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <31 20>;
+            layers = <0>;
         };
 
         BC {
             bindings = <&bt BT_CLR>;
             key-positions = <31 21>;
+            layers = <0>;
         };
 
         EP-ON {
             bindings = <&ext_power EP_ON>;
             key-positions = <25 31>;
+            layers = <0>;
         };
 
         BT {
             bindings = <&out OUT_BLE>;
             key-positions = <23 31>;
+            layers = <0>;
         };
 
         USB {
             bindings = <&out OUT_USB>;
             key-positions = <31 24>;
-        };
-
-        Off {
-            bindings = <&soft_off>;
-            key-positions = <34>;
+            layers = <0>;
         };
 
         Reset {
             bindings = <&sys_reset>;
             key-positions = <0 21 9 30>;
+            layers = <0>;
         };
     };
 
