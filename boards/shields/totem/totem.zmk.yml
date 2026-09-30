@@ -11,4 +11,4 @@ siblings:
   - totem_left
   - totem_right
 layouts:
-  - default_transform
+  - totem_physical_layout

@@ -5,6 +5,7 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.dtsi>
 
 / {
     chosen {
@@ -30,6 +31,55 @@
         display-name = "Default";
         transform = <&default_transform>;
         kscan = <&kscan0>;
+        keys = <
+            /* Left Hand */
+            <&key_physical_attrs 100 100   0 100 0 0 0>
+            <&key_physical_attrs 100 100 100   0 0 0 0>
+            <&key_physical_attrs 100 100 200   0 0 0 0>
+            <&key_physical_attrs 100 100 300 100 0 0 0>
+            <&key_physical_attrs 100 100 400 200 0 0 0>
+
+            <&key_physical_attrs 100 100   0 200 0 0 0>
+            <&key_physical_attrs 100 100 100 100 0 0 0>
+            <&key_physical_attrs 100 100 200 100 0 0 0>
+            <&key_physical_attrs 100 100 300 200 0 0 0>
+            <&key_physical_attrs 100 100 400 300 0 0 0>
+
+            <&key_physical_attrs 100 100   0 300 0 0 0>
+            <&key_physical_attrs 100 100 100 200 0 0 0>
+            <&key_physical_attrs 100 100 200 200 0 0 0>
+            <&key_physical_attrs 100 100 300 300 0 0 0>
+            <&key_physical_attrs 100 100 400 400 0 0 0>
+
+            <&key_physical_attrs 100 100 100 400 0 0 0>
+            <&key_physical_attrs 100 100 200 350 0 0 0>
+            <&key_physical_attrs 100 100 300 400 0 0 0>
+            <&key_physical_attrs 100 100 400 500 0 0 0>
+
+            /* Right Hand */
+            <&key_physical_attrs 100 100  600 200 0 0 0>
+            <&key_physical_attrs 100 100  700 100 0 0 0>
+            <&key_physical_attrs 100 100  800   0 0 0 0>
+            <&key_physical_attrs 100 100  900   0 0 0 0>
+            <&key_physical_attrs 100 100 1000 100 0 0 0>
+
+            <&key_physical_attrs 100 100  600 300 0 0 0>
+            <&key_physical_attrs 100 100  700 200 0 0 0>
+            <&key_physical_attrs 100 100  800 100 0 0 0>
+            <&key_physical_attrs 100 100  900 100 0 0 0>
+            <&key_physical_attrs 100 100 1000 200 0 0 0>
+
+            <&key_physical_attrs 100 100  600 400 0 0 0>
+            <&key_physical_attrs 100 100  700 300 0 0 0>
+            <&key_physical_attrs 100 100  800 200 0 0 0>
+            <&key_physical_attrs 100 100  900 200 0 0 0>
+            <&key_physical_attrs 100 100 1000 300 0 0 0>
+
+            <&key_physical_attrs 100 100  600 500 0 0 0>
+            <&key_physical_attrs 100 100  700 400 0 0 0>
+            <&key_physical_attrs 100 100  800 350 0 0 0>
+            <&key_physical_attrs 100 100  900 400 0 0 0>
+        >;
     };
 
     kscan0: kscan_0 {
@@ -53,13 +103,13 @@
         compatible = "gpio-leds";
         status = "okay";
         led0: led_0 {
-            gpios = <&gpio0 26 GPIO_ACTIVE_LOW>; // red LED
+            gpios = <&gpio0 26 GPIO_ACTIVE_LOW>;
         };
         led1: led_1 {
-            gpios = <&gpio0 30 GPIO_ACTIVE_LOW>; // green LED
+            gpios = <&gpio0 30 GPIO_ACTIVE_LOW>;
         };
         led2: led_2 {
-            gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;  // blue LED
+            gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
         };
     };
 };
