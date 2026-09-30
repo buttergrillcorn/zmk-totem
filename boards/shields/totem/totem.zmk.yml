@@ -10,5 +10,7 @@ features:
 siblings:
   - totem_left
   - totem_right
-layouts:
-  - totem_physical_layout
+physical_layouts:
+  - display_name: "Default"
+    transform: default_transform
+    kscan: kscan0
